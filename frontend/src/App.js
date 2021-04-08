@@ -7,7 +7,7 @@ import PublicRoute from './components/PublicRoute'
 import Login from './pages/Login'
 import Main from './pages/Main'
 import Profile from './pages/Profile'
-import { setUserByToken } from './ducks/session'
+import { setUserByToken } from './ducks/session/actions'
 
 const App = () => {
   const dispatch = useDispatch()

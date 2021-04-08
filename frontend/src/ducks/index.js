@@ -1,4 +1,4 @@
-import sessionReducer from './session'
+import sessionReducer from './session/reducer'
 import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 
