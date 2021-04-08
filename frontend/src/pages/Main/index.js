@@ -11,7 +11,7 @@ const Main = () => {
             <p>Main</p>
             <p>{user.id}</p>
             <h1>{user.email}</h1>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile">-&gt; Profile</Link>
             <LogoutButton />
         </div>
     )

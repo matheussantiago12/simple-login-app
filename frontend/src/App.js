@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 import PrivateRoute from './components/PrivateRoute'
+import PublicRoute from './components/PublicRoute'
 import Login from './pages/Login'
 import Main from './pages/Main'
 import Profile from './pages/Profile'
@@ -24,7 +25,7 @@ const App = () => {
       <Switch>
         <PrivateRoute composedComponent={Main} path="/main" exact />
         <PrivateRoute composedComponent={Profile} path="/profile" exact />
-        <Route component={Login} path="/" />
+        <PublicRoute component={Login} path="/" />
       </Switch>
     </BrowserRouter>
   )
