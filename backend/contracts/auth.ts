@@ -1,10 +1,3 @@
-/**
- * Contract source: https://git.io/JvyKD
- *
- * Feel free to let us know via PR, if you find something broken in this
- * file.
- */
-
 import User from 'App/Models/User'
 
 declare module '@ioc:Adonis/Addons/Auth' {
