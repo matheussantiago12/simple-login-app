@@ -13,8 +13,8 @@ export default class AuthController {
   public async logout ({ response, auth }: HttpContextContract) {
     try {
       await auth.logout()
-
-      return response.status(200).send(auth.user)
+      
+      return response.status(200)
     } catch (error) {
       return response.status(400).json({ error: 'Erro ao dar logout' })
     } 
@@ -27,5 +27,9 @@ export default class AuthController {
       const user = await User.create({ email, password })
 
       return response.status(201).json(user)
+  }
+
+  public async loggedUser ({ auth, response }: HttpContextContract) {
+    return response.json(auth.user)
   }
 }
