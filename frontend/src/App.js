@@ -7,7 +7,7 @@ import PublicRoute from './components/PublicRoute'
 import Login from './pages/Login'
 import Main from './pages/Main'
 import Profile from './pages/Profile'
-import { getUserByToken } from './ducks/session'
+import { setUserByToken } from './ducks/session'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ const App = () => {
     const token = localStorage.getItem('token')
 
     if (token) {
-      dispatch(getUserByToken(token))
+      dispatch(setUserByToken(token))
     }
   }, [])
 
@@ -25,7 +25,7 @@ const App = () => {
       <Switch>
         <PrivateRoute composedComponent={Main} path="/main" exact />
         <PrivateRoute composedComponent={Profile} path="/profile" exact />
-        <PublicRoute component={Login} path="/" />
+        <PublicRoute composedComponent={Login} path="/" />
       </Switch>
     </BrowserRouter>
   )

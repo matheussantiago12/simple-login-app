@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import LogoutButton from '../../components/LogoutButton'
 
 const Main = () => {
-    const user = useSelector(state => state.user)
+    const user = useSelector(state => state.session.user)
 
     return (
         <div>

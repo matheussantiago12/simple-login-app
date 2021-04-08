@@ -4,7 +4,9 @@ const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
 
 const initialState = {
-    user: {}
+    session: {
+        user: {}
+    }
 }
 
 export const login = user => {
@@ -24,24 +26,28 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case LOGIN:
             return {
-                user: action.payload
+                session: {
+                    user: action.payload
+                }
             }
         case LOGOUT:
             return {
-                user: {}
+                session: {
+                    user: {}
+                }
             }
         default:
             return state
     }
 }
 
-export const getUserByToken = token => {
+export const setUserByToken = token => {
     return async dispatch => {
         try {
             const loggedUserResponse = await getLoggedUser(token)
             const user = loggedUserResponse.data
 
-            dispatch(login(user))
+            dispatch(login({ ...user, token }))
         } catch (error) {
             console.log(error)
         }
