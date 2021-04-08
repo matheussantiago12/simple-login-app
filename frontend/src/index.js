@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { sessionReducer } from './redux/ducks/session'
+import sessionReducer from './ducks/session'
 import thunk from 'redux-thunk'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

@@ -1,4 +1,4 @@
-import { getLoggedUser } from '../../services/session'
+import { getLoggedUser } from '../services/session'
 
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
@@ -20,7 +20,7 @@ export const logout = () => {
     }
 }
 
-export const sessionReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case LOGIN:
             return {
@@ -47,3 +47,5 @@ export const getUserByToken = token => {
         }
     }
 }
+
+export default reducer
