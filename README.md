@@ -7,7 +7,7 @@
 
 ## Introdução  
 
-Pequena sistema de autenticação, feito com React e Adonis. O objetivo é ser o mais simples possível, sem nenhuma estilização, o que importa aqui é apenas o funcionamento.
+Pequeno sistema de autenticação, feito com React e Adonis. O objetivo é ser o mais simples possível, sem nenhuma estilização, o que importa aqui é apenas o funcionamento.
 
 ## Tecnologias utilizadas
 - Node
